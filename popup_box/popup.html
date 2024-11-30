@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Popup Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+
+    <button onclick="openPopup()">Open Popup</button>
+    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci mollitia officiis iusto, deserunt dolore maiores eligendi molestias rerum dicta ex sint, minima assumenda similique perferendis quia nesciunt molestiae autem corrupti!
+    Ex, repellendus. Cumque, aperiam ad, nam eum suscipit ipsam harum corporis animi culpa eveniet dolorum autem fuga accusamus tempore architecto praesentium eligendi eos amet ratione molestias. Iure deserunt atque quod.</p>
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box">
+            <button class="close-btn" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quisquam accusantium necessitatibus rerum, incidunt vel quod mollitia hic? Vero voluptate quia nisi qui illo repudiandae blanditiis! Incidunt aut non perspiciatis.
+            Qui est tempora, ipsam mollitia rerum cupiditate asperiores rem praesentium distinctio nostrum porro animi vero ea eligendi nesciunt facere unde repellendus placeat nulla molestias aut error. Non cumque architecto quo.</p>
+            
+        </div>
+    </div>
+
+    <script>
+        // Function to open the popup
+        function openPopup() {
+            document.getElementById("popupOverlay").style.display = "flex";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+                //         Q1: Write a function called checkNumber(num) that:
+                // Returns "Fizz" if num is divisible by 3.
+                // Returns "Buzz" if num is divisible by 5.
+                // Returns "FizzBuzz" if num is divisible by both 3 and 5.
+                // Returns the number itself if it's not divisible by 3 or 5.
+
+
+                  function checkNumber(num){
+                    if(num % 3 == 0){
+                        return 'FIZZ'
+                    }else if (num % 5 == 0){
+                        return 'Buzz'
+                    }else if (num % 3 == 0 && num % 5 == 0){
+                        return 'FizzBuzz'
+                    }else if (num % 3 != 0){
+                        return  num
+                    }
+                  }
+                  console.log(checkNumber());           
+
+                //   Write a function called getDayName(dayNumber) using a switch statement. It should return the day of the week as a string for the given dayNumber 
+                //   (1 for "Monday", 2 for "Tuesday", ..., 7 for "Sunday"). If dayNumber is out of range, return "Invalid day".
+
+                
+                function getDayName(dayNumber){
+                    switch (dayNumber) {
+                        case 1:
+                            console.log('Monday');
+                            break;
+                        case 2:
+                            console.log('Tuesday');
+                            break;
+                        case 3:
+                            console.log('Wednesday');
+                            break;
+                        case 4:
+                            console.log('Thursday');
+                            break;
+                        case 5:
+                            console.log('Friday');
+                            break;
+                        case 6:
+                            console.log('Saturday');
+                            break;
+                        case 7:
+                            console.log('Sunday');
+                            break;
+                        default:
+                            console.log('Invalid Day');
+                            break;
+                    }
+                }
+    
+             console.log(getDayName(2));
+             
+    </script>
+</body>
+</html>

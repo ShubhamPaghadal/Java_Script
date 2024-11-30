@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1. Sum of All Numbers in an Array																									
+        const arr1 = [1, 2, 3, 4, 5];
+        const p1 = arr1.reduce((a, b) => {
+            return a + b
+        })
+        console.log(p1);
+
+        // 2. Filter Even Numbers																									
+        const arr2 = [1, 2, 3, 4, 5, 6]
+        const p2 = arr2.filter(a => {
+            return a % 2 == 0
+        })
+        console.log(p2);
+
+        // 3. Double the Numbers Using `map`																									
+        const arr3 = [1, 2, 3, 4];
+        const p3 = arr3.map(a => a * 2)
+        console.log(p3);
+
+        // 4. Find the First Odd Number																									
+        const arr4 = [2, 4, 5, 6];
+        const p4 = arr4.filter(a => a % 2 != 0)
+        console.log(p4);
+
+        // 5. Find an Object in an Array Using `find`																									
+        const users = [{ name: 'Alice', age: 30 }, { name: 'John', age: 25 }];
+        const p5 = users.find(user => user.name)
+        console.log(p5);
+
+        // 6. Check if All Elements are Positive Using `every`																									
+        const arr5 = [1, 2, 3, 4];
+        const p6 = arr5.every(a => a > 0)
+        console.log(p6);
+
+        // 7. Multiply All Elements Using `reduce`																									
+        const arr6 = [1, 2, 3, 4];
+        const p7 = arr6.reduce((a, b) => a * b)
+        console.log(p7);
+
+        // 8. Reverse a String																									
+        const str1 = "hello";
+        const reverse = str1.split('').reverse().join('')
+        console.log(reverse);
+
+
+        // 9. Count the Number of Vowels in a String																									
+        const str2 = "javascript";
+        const p9 = str2.split('').filter(a => {
+            if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u') {
+                return a
+            }
+        }).length
+        console.log(p9);
+
+        // 10. Remove Falsy Values from an Array																									
+        const arr10 = [0, 1, false, 2, '', 3];
+        const p10 = arr10.filter(a => a)
+        console.log(p10);
+
+
+        // 11. Find Maximum Number in an Array																									
+        const arr11 = [1, 2, 3, 4, 5];
+        const max = arr11[0]
+        const p11 = arr11.filter(a => {
+            if (a < max) {
+                max = a
+            }
+        })
+        console.log(max);
+
+
+        // // 12. Find Maximum Number in an Array																									
+        const arr12 = [1, 2, 3, 4, 5];
+        let min = arr12[0]
+        const p12 = arr12.filter(a => {
+            if (a < min) {
+                min = a
+            }
+        })
+        console.log(min);
+
+        // 13. Calculate the Average of Numbers in an Array
+        const arr14 = [1, 2, 3, 4, 5]
+        const p14 = arr14.reduce((a, b) => {
+            return a + b
+        })
+        console.log(p14 / arr14.length);
+
+
+        // 14. Convert Array of Strings to Uppercase Using `map`
+        const words = ["apple", "banana", "cherry"];
+        const uppercase = words.map(a => a.toUpperCase())
+        console.log(uppercase);
+
+
+        // 12. Find Minimum Number in an Array
+        const arr13 = [1, 2, 3, 4, 5];
+        min = arr13[0]
+        const p13 = arr13.filter(a => {
+            if (a < min) {
+                min = a
+            }
+        })
+        console.log(min);
+
+        // 16. Find the Longest Word in a Sentence
+        function long_word(sentence1) {
+            const word = sentence1.split(' ')
+            const maxlenght = Math.max(...word.map(word => word.length))
+            return maxlenght
+        }
+        console.log(long_word("The quick brown fox jumps over the lazy dog"));
+
+        // 17. Check if a Specific Element Exists in an Array Using `includes`																									
+        const arr8 = [1, 2, 3, 4, 5];
+        const number1 = 3;
+        const p17 = arr8.includes(3)
+        console.log(p17);
+
+        // 18. Flatten a Nested Array Using `flat`																									
+        const arr9 = [1, [2, 3], [4, 5]];
+        const p18 = arr9.flat()
+        console.log(p18);
+
+
+        // 19. Sort an Array of Numbers in Ascending Order																									
+        const arr15 = [5, 3, 8, 1, 2];
+        const p19 = arr15.filter(a => a).reverse()
+
+        // 20. Sort and Deduplicate an Array of Numbers																									
+        const arr20 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3];
+        const p20 = arr20.filter((a, b) => {
+            return arr20.indexOf(a) == b
+        })
+        console.log(p20);
+
+
+        // 21. Remove All Odd Numbers from an Array																									
+        const arr16 = [1, 2, 3, 4, 5, 6, 7, 8];
+        const p21 = arr16.filter(a => a % 2 === 0)
+        console.log(p21);
+
+        // 23. Find the Sum of All Odd Numbers in an Array																									
+        const arr17 = [1, 2, 3, 4, 5, 6];
+        const odd_num = arr17.filter(a => a % 2 != 0)
+        const odd_sum = odd_num.reduce((a, b) => a + b)
+        console.log(odd_sum);
+
+        // 24. Find the Product of All Odd Numbers in an Array																									
+        const arr18 = [1, 2, 3, 4, 5, 6];
+        const product = arr18.reduce((a, b) => a * b)
+        console.log(product);
+
+
+        // 25. Capitalize the First Letter of Each Word in a Sentence																									
+        const sentence2 = "hello world from javascript";
+        const capitalize = sentence2.split(' ')
+        const first_cha = capitalize.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('   ')
+        console.log(first_cha);
+
+
+        // 26. Filter an Array of Objects Based on a Property																									
+        const users2 = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 35 },
+        ];
+
+        const obj = users2.filter(a => a.age > 20)
+        console.log(obj);
+
+        // 27. Count the Number of Even Numbers in an Array																									
+        const arr19 = [1, 2, 3, 4, 5, 6];
+        const Even = arr19.filter(a => a % 2 == 0).length
+        console.log(Even);
+
+        // 28. Extract Unique Characters from a String																									
+        const str4 = "javascript";
+
+        // 29. Find Common Elements Between Two Arrays																									
+        const arr_20 = [1, 2, 3, 4];
+        const arr21 = [3, 4, 5, 6];
+
+        const common = arr_20.concat(arr21)
+        const Ele = common.filter((a, b) => common.indexOf(a) != b)
+        console.log(Ele);
+
+        // 30. Find the Index of the First Occurrence of a Character in a String																									
+        const str5 = "hello";
+        const char1 = "l";
+
+        const occu = str5.split('').filter(a => a.indexOf('l'))
+        console.log(occu);
+
+        // 31. Find All Prime Numbers in an Array																									
+        const arr22 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const prime = arr22.filter(a => a % 2 != 0)
+        console.log(prime)
+
+        // 32. Replace All Occurrences of a Character in a String																									
+        const str6 = "hello world";
+        const oldChar = "o";
+        const newChar = "a";
+        const Replace = str6.replace(/o/g, 'a')
+        console.log(Replace);
+
+
+        // 33. Find the Second Largest Number in an Array																									
+        const arr23 = [10, 20, 30, 40, 50];
+        const find = [...new Set(arr23)]
+        console.log(find.sort((a, b) => b - a)[1]);
+
+
+        // 56. Convert a CamelCase String to Snake Case																									
+        const str12 = "shubham_paghadal";
+        function CamaltoSnake(str) {
+            const convert = str.replace(/([_])/g, '')
+            console.log(convert);
+        }
+        CamaltoSnake(str12)
+        
+        // 58. Check if All Elements in an Array Are Even																									
+        const arr37 = [2, 4, 6, 8, 10];
+        const check_Even = 
+
+    </script>
+</body>
+
+</html>

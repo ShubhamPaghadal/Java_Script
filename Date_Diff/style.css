@@ -1,0 +1,48 @@
+
+*{
+    margin: 0;
+}
+
+
+body{
+    height: 100vh;
+    background-color: rgb(184, 169, 184);
+    place-items: center;
+    display: grid;
+}
+
+button{
+    width: 250px;
+    margin: 20px 0  0  80px;
+}
+
+
+.box{
+  width: 30%;
+  padding: 30px;
+  background-color: beige;
+  border-radius: 4px;
+  box-shadow: 0 0 40px black;
+}
+
+.fdate{
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.ldate{
+            width:250px;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+
+}

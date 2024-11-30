@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<!--HTML -->
+<body>
+
+      <div class="box">
+        <h1>Date difference</h1>
+        <div class="date_input">
+                <div>
+                    <label for="fdate">Choose date</label>
+                    <input class="fdate" type="date" name="" id="fdate">
+                </div>
+               <div>
+                    <label for="ldate">Choose date</label>
+                    <input class="ldate" type="date" name="" id="ldate" >
+                </div>  
+
+        </div>
+        <button>Calculate Difference</button>
+        <p class="result"></p>
+      </div>
+
+
+
+    <!-- JAVA SCRIPT  -->
+        <script>
+                    // print on 
+                    
+            // const fdate= document.getElementById('fdate')
+            // const ldate = document.getElementById('ldate')
+            // const btn = doWx`cument.querySelector('button')
+            // const result = document.querySelector('.result')
+            
+            // btn.addEventListener('click' , () =>{
+            //     const fvalue =  fdate.value
+            //     const lvalue =  ldate.value
+
+            //     let date1 = new Date(fvalue).getTime()
+            //     let date2= new Date(lvalue).getTime()
+            //     const difference = date1 - date2
+
+            //    result.innerHTML = `Differnce ${difference / (1000 * 60 * 60 * 24)} days`
+            // })
+
+
+        const fdate = document.getElementById('fdate');
+        const ldate = document.getElementById('ldate');
+        const btn =  document.querySelector('button');
+        const result = document.querySelector('.result');
+
+        btn.addEventListener('click', () => {
+            const fvalue = fdate.value;
+            const lvalue = ldate.value;
+
+
+            // Check if both dates are   selected
+            if (!fvalue || !lvalue) {
+                result.innerHTML = "Please select both dates.";
+                return;
+            }
+
+            // Create Date objects
+            const date1 = new Date(fvalue);
+            const date2 = new Date(lvalue);
+
+            // Ensure date1 is the earlier date
+            if (date1 > date2) {    
+                [date1, date2] = [date2, date1];
+            }
+
+            // Calculate year, month, and day differences
+            let years = date2.getFullYear() - date1.getFullYear();
+            let months = date2.getMonth() - date1.getMonth();
+            let days = date2.getDate() - date1.getDate();
+
+            // Adjust months and years if needed
+            if (days < 0) {
+                months -= 1;
+                days += new Date(date2.getFullYear(), date2.getMonth(), 0).getDate();
+            }
+
+            if (months < 0) {
+                years -= 1;
+                months += 12;
+            }
+
+            // Display the result
+            result.innerHTML = `Difference: ${years} years, ${months} months,  ${days} days`;
+        }); 
+
+</script>
+</body>                                                     
+</html>

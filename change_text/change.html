@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text"  value="Shubham Paghadal"  id="left_input">
+
+        <button id="to_right" >→</button>
+        <button style="display: none;" id="to_left">←</button>
+
+        <input type="text" value="" id="to_left">
+
+    </div>
+
+    <script>
+        let left_input = document.getElementById('left_input')
+        let right_input = document.getElementById('right_input')
+        let to_left= document.getElementById('to_left')
+        let to_right= document.getElementById('to_right')
+
+        
+        to_right.addEventListener('click' , () => {
+            left_input.value =  right_input.value 
+            left_input.value = '';
+            to_right.style.display = 'none'
+            left_input.style.display = 'inline'
+
+
+        })
+    </script>
+</body>
+</html>

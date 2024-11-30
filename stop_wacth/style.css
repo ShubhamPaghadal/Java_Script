@@ -1,0 +1,51 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+
+
+body{
+    background-color: rgb(13, 189, 243);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1{
+    text-decoration: underline;
+    color: rgb(194, 194, 24);
+    padding-left: 40px;
+}
+
+.container{
+    background-color: blue;
+    height: 189px;
+    width: 337px;
+    display: flex;
+    justify-content: center;
+    align-items: center;                                                                    
+    flex-direction: column;
+    box-shadow: 10px  10px 10px  rgb(20, 20, 20);
+    border-radius: 33px;
+    
+}
+.time_display{          
+    padding: 27px  10px;
+    color: yellow;
+    font-size: 25px;
+}
+
+.btn{
+    margin-right: 20px;
+     padding-right: 20px;
+     width: 50px;
+     height: 30 px;
+     border-radius: 5px ;
+     
+   
+    
+   
+}

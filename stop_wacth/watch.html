@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="stop_watch">
+        <div class="heading">
+            <h1>Stop  Watch</h1>
+        </div>
+        <div class="time_display">
+            00min : 00sec : 00msec
+        </div>
+       </div> 
+       <div class="buttons">
+        <button class="btn" id="stop_btn">Stop</button>
+        <button class="btn" id="start_btn">Start</button>
+        <button class="btn" id="reset_btn">Reset</button>
+       </div>
+    </div>  
+
+
+       <!-- java script -->
+
+       <!-- <script>
+            let time_display = document.querySelector('.time_display')
+            let start_btn = document.getElementById('#start_btn')                                                                                               
+            let stop_btn = document.getElementById('#stop_btn')
+            let reset_btn = document.getElementById('#reset_btn')
+
+            let msec= 0;
+            let sec = 0;
+            let min = 0;
+
+            let timerID = null
+
+            start_btn.addEventListener('click' , () => {
+                if(timerID !== null){
+                    clearInterval(timerID);
+                }
+                timerID = setInterval(startTimer, 10);
+            })
+
+
+            stop_btn.addEventListener('click' , () => {
+                clearInterval(timerID);
+              
+            })
+
+            reset_btn.addEventListener('click' , () => {
+                clearInterval(timerID);
+                timerDisplay.innerHTML = `00 : 00 : 00`;
+              
+            })
+
+
+            function startTimer(){
+                msec++;
+                if(msec == 100){
+                    msec = 0 ;
+                    sec++;
+                    if(sec == 60){
+                        sec = 0;
+                        min++
+                    }
+                }
+
+                let msecString = msec < 10 ? `0${msec}` : msec;
+                let secString = sec < 10 ? `0${sec}` : sec;
+                let minString = min < 10 ? `0${min}` : min;
+            }
+
+
+            timerDisplay.innerHTML = `${minString} : ${secstring} : ${msecString}`
+
+       </script> -->
+
+       <script>
+        let time_display = document.querySelector('.time_display');
+        let start_btn = document.getElementById('start_btn');  // Removed '.' before start_btn
+        let stop_btn = document.getElementById('stop_btn');
+        let reset_btn = document.getElementById('reset_btn');
+    
+        let msec = 0;
+        let sec = 0;
+        let min = 0;
+    
+        let timerID = null;
+    
+        // Start button event
+        start_btn.addEventListener('click', () => {
+            if (timerID !== null) {
+                clearInterval(timerID);
+            }
+            timerID = setInterval(startTimer, 10);
+        });
+    
+        // Stop button event
+        stop_btn.addEventListener('click', () => {
+            clearInterval(timerID);
+        });
+    
+        // Reset button event
+        reset_btn.addEventListener('click', () => {
+            clearInterval(timerID);
+            msec = sec = min = 0;
+            time_display.innerHTML = `00min : 00sec : 00msec`;
+        });
+    
+        // Timer function
+        function startTimer() {
+            msec++;
+            if (msec === 100) {
+                msec = 0;
+                sec++;
+                if (sec === 60) {
+                    sec = 0;
+                    min++;
+                }
+            }
+    
+            // Format time as strings
+            let minString = min < 10 ? `0${min}` : min;
+            let secString = sec < 10 ? `0${sec}` : sec;
+            let msecString = msec < 10 ? `0${msec}` : msec;
+    
+            // Display the time
+            time_display.innerHTML = `${minString}min : ${secString}sec : ${msecString}msec`;
+        }
+    </script>
+    
+</body>
+</html>

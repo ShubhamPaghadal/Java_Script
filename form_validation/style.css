@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+}   
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.heading{
+    height: 320px;
+    width: 397px;
+    border: 15px solid rgb(41, 185, 196);
+    display: block;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+     padding: 0px 0px 44px 131px;
+}   
+
+
+
+.submit{
+    height: 33px;
+    width: 160px;
+}
+
+
+.form_field{
+    margin-bottom: 23px;
+    margin-left: 50px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character counter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<div class="container">
+    <div class="header">
+        <h1>Character counter</h1>
+    </div>
+    <div class="input_box">
+        <textarea class="text" rows="10"  cols="50" placeholder="Enter a text"></textarea>
+    </div>
+
+    <div class="counter">
+        <a class="box"><span class="words">0</span>words</a>
+        <a class="box"><span class="characters">0</span>characters</a>
+    </div>
+</div>
+
+<!-- java script -->
+<script> 
+    let text = document.querySelector('.text')
+    let words= document.querySelector('.words')
+    let characters = document.querySelector('.characters')
+
+    text.addEventListener('input' , () => {
+                characters.textContent = text.value.length  
+                // var txt = text.value.trim();
+                // words.textContent = txt.split(/\s+/).filter((item) => item).length
+    })
+
+</script>
+<body>
+</body>
+</html>

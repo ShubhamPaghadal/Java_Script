@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete_row</title>
+</head>
+<body>
+    <div class="continer">
+        <table border="2">
+            <caption>Student detail</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Number</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shubham</td>
+                    <td>shubham@gmail.com</td>
+                    <td>96131303450</td>
+                    <td><button id="button" onclick="Delete_Row(this)">Delete</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Shubham</td>
+                    <td>shubham@gmail.com</td>
+                    <td>96131303450</td>
+                    <td><button id="button" onclick="Delete_Row(this)">Delete</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Shubham</td>
+                    <td>shubham@gmail.com</td>
+                    <td>96131303450</td>
+                    <td><button id="button" onclick="Delete_Row(this)">Delete</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Shubham</td>
+                    <td>shubham@gmail.com</td>
+                    <td>96131303450</td>
+                    <td><button id="button" onclick="Delete_Row(this)">Delete</button></td>
+                    
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Shubham</td>
+                    <td>shubham@gmail.com</td>
+                    <td>96131303450</td>
+                    <td><button id="button" onclick="Delete_Row(this)">Delete</button></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script>
+
+        function Delete_Row(button){
+
+            let confirm_Delete = confirm('Are you sure to Delete')
+
+            if(confirm) {
+               let row = button.parentElement.parentElement
+               row.remove()
+            }
+
+        }
+    </script>
+</body>
+</html>

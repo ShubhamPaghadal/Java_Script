@@ -1,0 +1,60 @@
+body{ 
+background-color: gray;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+
+}
+.container{
+    display: flex;
+    align-items: center ;
+    gap: 50px;
+    
+}
+
+.fram{
+    overflow: hidden;
+    width: 1200px;
+    box-shadow: 10px 10px 20px black;
+    
+}
+
+.slider{    
+    display: flex;
+    transition: all 1s ease;
+}
+
+.arrow{
+    cursor: pointer;
+}
+    
+.right{
+    transform: rotate(180deg);
+}
+
+.img{
+    max-height: 800px;
+    
+}
+
+
+
+
+
+
+
+
+/* .left{
+  height: 350px;
+}   
+
+.right{
+  height: 350px;
+  transform: rotate(180deg);
+}  
+
+
+.slider_img{
+    max-height: 800px;
+} */

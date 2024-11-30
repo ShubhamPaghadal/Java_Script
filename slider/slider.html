@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HTML -->
+ 
+<div class="container">
+    <img src="./img/arrow_left.png" class=" arrow left">
+     <div class="fram">
+         <div class="slider"> 
+       <img src="./img/img1.png" class="img">
+       <img src="./img/img2.png" class="img">
+       <img src="./img/img1.png" class="img">
+           </div>
+     </div> 
+     <img src="./img/arrow_left.png" class="arrow right">
+</div>    
+</body>
+<script>
+
+
+let left = document.querySelector(".left");
+let right = document.querySelector(".right");
+let slider = document.querySelector(".slider");
+let img = document.querySelectorAll(".img");
+
+let sliderNum = 0; // Start at 0 for easier calculations
+const imageWidth = 1200; // Adjust as per your image width
+
+const img_right_slider = () => {
+  slider.style.transform = `translateX(-${sliderNum * imageWidth}px)`;
+};
+
+const img_left_slider = () => { 
+  slider.style.transform = `translateX(-${sliderNum * imageWidth}px)`;
+};
+
+// Right arrow click event
+right.addEventListener('click', () => {
+  if (sliderNum < img.length - 1) {
+    sliderNum++;
+    img_right_slider();
+  } else {
+    slider.style.transform = `translateX(0px)`; // Reset to the first image
+    sliderNum = 0;
+  }
+});
+
+
+// Left arrow click event
+left.addEventListener('click', () => {
+  if (sliderNum > 0) {
+    sliderNum--;
+    img_left_slider();
+  } else {
+    sliderNum = img.length - 1; // Move to the last image
+    img_left_slider();
+  }
+}); 
+
+</script>
+</html> 

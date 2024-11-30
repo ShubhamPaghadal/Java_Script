@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button style="border-color: blueviolet;
+                  margin-top: 280px;
+                  margin-left: 600px;
+
+                     ">Click me</button>
+
+
+    <script>
+
+    //    const body = document.querySelector("body")
+    //    const button  = document.querySelector("button")
+    //    const colors = ["green" , "pink" ," yellow" , "red" ,"purple" , "orange"]
+
+    //    body.style.backgroundColor  = 'violet'
+
+    //    button.addEventListener('click' ,function(){
+    //     const colorIndex = parseInt(Math.random() * colors.length);
+    //     body.style.backgroundColor=colors[colorIndex]
+    //    })
+
+
+
+   const body = document.querySelector('body')
+    const btn = document.querySelector("button")
+    const color = ['green' , 'yellow' , 'purple' , 'orange']
+     body.style.backgroundColor = 'red'
+
+     
+  btn.addEventListener('click' , function (){
+     const random =color[ Math.floor(Math.random() * color.length)]
+     document.body.style.backgroundColor =  random
+  })  
+
+</script>
+</body>
+</html>
