@@ -51,7 +51,7 @@
 
         // 8. Reverse a String																									
         const str1 = "hello";
-        const reverse = str1.split('').reverse().join('')
+        const reverse = str1.split('')
         console.log(reverse);
 
 
@@ -216,7 +216,6 @@
         const Replace = str6.replace(/o/g, 'a')
         console.log(Replace);
 
-
         // 33. Find the Second Largest Number in an Array																									
         const arr23 = [10, 20, 30, 40, 50];
         const find = [...new Set(arr23)]
@@ -224,16 +223,59 @@
 
 
         // 56. Convert a CamelCase String to Snake Case																									
-        const str12 = "shubham_paghadal";
+        const str12 = "shubhamPaghadal";
         function CamaltoSnake(str) {
-            const convert = str.replace(/([_])/g, '')
+            const convert = str.replace(/([A-Z])/g, '_$1')
             console.log(convert);
         }
         CamaltoSnake(str12)
-        
+
         // 58. Check if All Elements in an Array Are Even																									
         const arr37 = [2, 4, 6, 8, 10];
-        const check_Even = 
+        const check_Even = arr37.filter(a => {
+            Even_Num = a % 2 === 0 ? true : false
+        })
+        console.log(Even_Num);
+
+
+        // 59. Find the First Palindromic Word in an Array																									
+        const words3 = ["apple", "racecar", "banana"];
+        const check_words = words3.filter(word => {
+            const words = word.split('').reverse().join('')
+            return word == words
+        })
+        console.log(check_words);
+
+        // 60. Sum the Lengths of All Strings in an Array																									
+        const arr38 = ["hello", "world", "javascript"];
+        const arr_length = arr38.toString()
+        console.log(arr_length.length);
+
+        // 61. Create an Array of Unique Objects Based on a Property																									
+        const objects = [
+            { id: 1, name: "Alice" },
+            { id: 2, name: "Bob" },
+            { id: 1, name: "Alice" },
+        ];
+
+        const unique_arr = objects.filter((obj, index, arr) => index)
+        console.log(unique_arr);
+
+        // 62. Find All Numbers Divisible by a Given Number in an Array																									
+        const arr39 = [10, 20, 30, 40, 50];
+        const divisor = 10;
+             
+        function Divisor_arr(num){
+            const store_arr = []
+            for(i = 0; i <num; i++)
+            if(num % i === 0){
+                store_arr.push
+
+            }
+            return store_arr
+        }
+        console.log(Divisor_arr(divisor));
+        
 
     </script>
 </body>
